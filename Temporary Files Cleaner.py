@@ -1,6 +1,13 @@
+try:
+    import ctypes
+    import shutil
+    import colorama
+except ModuleNotFoundError as e:
+    modulename = str(e).split("No module named ")[1].replace("'", "")
+    input(f"Please install module with: pip install {modulename}")
+    exit()
+
 import os
-import shutil
-import ctypes
 from colorama import Fore, init
 
 init(convert=True)
